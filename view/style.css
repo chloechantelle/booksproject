@@ -1,0 +1,301 @@
+:root {
+    --accent: #65499c;
+    --darkaccent: #4d3777;
+    --cursive: "Courgette", cursive;
+}
+*, a {
+    transition: ease-in-out .2s;    
+}
+
+body {
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+
+a, .login .notice a {
+    color: var(--accent);
+}
+a:hover {
+    text-decoration: none;
+    background: var(--accent);
+    color: #fff;
+    padding: 3px;
+}
+/*floater*/
+.floater {
+    background: var(--darkaccent);
+    color: #fff;
+    font-size: 30px;
+    /*padding: 20px;*/
+    text-align: center;
+    line-height: 50px;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+}
+/* book page */
+.bookcon {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /*background: #aaa;*/
+    padding: 0px 20px 20px 20px;
+    max-width: 60%;
+    /*width: 80%;*/
+    margin: 0px auto;   
+}
+@media only screen and (max-width: 1200px) {
+        .bookcon {
+    max-width: 100%;
+    }
+    .navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+    padding: 10px !important;
+    }
+    .logo, .right {
+        display: none !important;
+    }
+}
+.book {
+    background: #eee;
+    /*padding: 10px;*/
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 20px;   
+    /*border: 1px solid #aaa;   */
+}
+.book:hover {
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+}
+.bookinfo {
+    /*background: #f5f5f5;*/
+    margin-top: 5px;
+    padding: 5px;
+}
+.actionbuttons {
+    /*margin: 5px;*/
+    padding: 3px;
+    color: var(--accent);
+    /*background: #fff;*/
+}
+.cover {
+    width: 100%;
+    /*border-radius: 5px;*/
+    max-height: 300px;
+}
+h1, h2, h3 {
+    padding: 5px;
+    margin: 5px;    
+    text-align: left;   
+}
+h1, h2 {
+    /*display: inline;*/
+    font-size: 15px;
+    color: #666;    
+}
+h3 {
+    /*display: inline;*/
+    font-size: 12px;    
+    color: var(--accent);
+}
+h4 {
+    font-size: 25px;
+    color: var(--accent);
+    font-family: var(--cursive);
+}
+/* navbar */
+.collapse {
+    display: inline-block;
+}
+.nav > li { 
+    display: inline-block;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    background: transparent;
+}
+.navbar {
+    border: none !important;
+    background: transparent;    
+    border-radius: 0px !important;
+    position: fixed;
+    width: 100%;
+    display: inline-block;
+    margin: 0px;
+    /*box-shadow: 3px 3px 7px rgba(0,0,0,0.3);*/
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    padding: 30px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+}
+.right span {
+    color: #aaa;
+}
+.pagehead {
+    background: url("../view/images/bookshelfblur.jpg");
+    width: 100%;
+    min-height: 300px;  
+    /*position: fixed;*/
+}
+.pagehead p {
+    font-size: 55px;
+    font-family: var(--cursive);
+    /*font-style: italic;*/
+    font-weight: 900;
+    letter-spacing: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 160px 0px 130px 0px;
+    color: #fff;
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.7);
+    /*text-decoration: dotted underline var(--accent);*/
+    cursor: default;
+}
+.logo {
+    font-size: 18px;
+    font-family: var(--cursive);
+    font-style: italic;
+    font-weight: 900;
+}
+.active {
+    /*background: #f5f5f5;*/
+}
+/* log in/out button */
+.right, .navbar-nav > li > .right {
+    position: absolute !important;
+    right: 0 !important;
+}
+/* add page */
+.add {
+    /*background: #000;*/
+    padding: 10px;
+    width: 80%; 
+    margin: 15px auto;
+    text-align: center;
+}
+.add label {
+    padding: 10px;
+    font-size: 20px;
+    color: var(--accent);
+    font-family: var(--cursive);
+}
+
+.add input {
+    display: block;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    margin: 5px auto;
+    border: 1px solid #eee;
+}
+.add input[type="submit"] {
+    padding: 10px;
+    margin: 30px auto;
+    background: var(--accent);
+    font-family: var(--cursive);
+    font-size: 20px;
+    border: none !important;
+    width: 30%;
+    color: #fff;
+}
+.add input[type="submit"]:hover {
+    background: var(--darkaccent);
+}
+
+    /* validate */
+
+input, input:invalid, :-moz-ui-invalid:not(output) {
+    outline: none;
+    box-shadow: none;
+}
+
+input:valid {        
+    border-left: 4px solid green !important;
+}
+
+:-moz-ui-invalid:not(output), form.submitted input:invalid {
+ border-left: 4px solid red !important; 
+}
+
+input:invalid {
+     border-left: 4px solid red !important;
+ }
+
+/* note pages */
+.note {
+    background: #eee;   
+    font-size: 20px;    
+    width: 50%;
+    margin: 30px auto;
+    border-top: 40px solid var(--accent);   
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2)
+}
+.note p {
+    padding: 40px;
+    /*font-style: italic;*/
+}
+/* login page */
+.login {
+    padding: 250px 0px 250px 0px;   
+}
+.login h1, .login .notice { 
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.login h1 {
+    font-size: 35px;
+}
+.login input {
+    display: block;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    margin: 10px auto;
+    border: none !important;
+    border-radius: 5px;
+}
+.login input[type="submit"] {
+    background: var(--accent);
+    color: #fff;
+}
+.login input[type="submit"]:hover {
+    opacity: 0.8;
+}
+/*footer*/
+footer {
+    background: var(--accent);
+    color: #fff;
+    padding: 50px 20px 30px 20px;
+    box-shadow: 0px -3px 10px rgba(0,0,0,0.5);
+}
+
+/* <3 */
+.luv a {
+    text-align: center;
+    color: #eee;
+    padding: 0;
+}
+.container::before, .container::after {
+    display: inline-block;
+}
+.container {
+    text-align: center;
+}
+footer .luv::before, footer .luv::after {
+    content: "♥";    
+    padding: 0;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+    opacity: 0;
+    transition: ease-in-out .3s;
+}
+footer .luv:hover:before, footer .luv:hover:after {
+    opacity: 1 !important;
+    transition: ease-in-out .3s;
+}
